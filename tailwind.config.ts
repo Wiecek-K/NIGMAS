@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
@@ -15,9 +15,6 @@ const config: Config = {
         'ct-blue-600': '#2363eb',
         'ct-yellow-600': '#f9d13e',
       },
-      fontFamily: {
-        Poppins: ['Poppins, sans-serif'],
-      },
       container: {
         center: true,
         padding: '1rem',
@@ -30,5 +27,5 @@ const config: Config = {
     },
   },
   plugins: [],
-};
-export default config;
+}
+export default config
