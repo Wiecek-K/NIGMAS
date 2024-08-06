@@ -1,4 +1,4 @@
-import Header from '@/components/header';
+import {Header} from '@/components/header';
 import { RegisterForm } from './register-form';
 
 export default async function RegisterPage() {

@@ -1,4 +1,4 @@
-import Header from '@/components/header'
+import {Header} from '@/components/header'
 import { permanentMarker } from './ui/fonts'
 
 export default function Home() {
