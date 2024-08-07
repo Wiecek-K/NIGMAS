@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, FormEvent, ChangeEvent } from 'react';
-import Images from 'next/image';
+import NextImage from 'next/image';
 
 export function UploadImageForm() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -72,7 +72,7 @@ export function UploadImageForm() {
         <input type="file" name="file" accept="image/*" onChange={handleFileChange} />
 
         <div className="relative flex h-[400px] items-center justify-center overflow-hidden">
-          <Images
+          <NextImage
             src={file || '/images/default.png'}
             alt="Podgląd zdjęcia"
             layout="fill"
@@ -88,7 +88,8 @@ export function UploadImageForm() {
           placeholder={`Add your work tags separeted by commas "," `}
         />
         <input type="text" name="model" placeholder="Add your work model here" />
-
+        <label htmlFor="isPublicCheckbox">Add your as public</label>
+        <input type="checkbox" name="public" id="isPublicCheckbox" defaultChecked={true} />
         <button type="submit" disabled={isLoading}>
           {isLoading ? 'Loading...' : 'Submit'}
         </button>

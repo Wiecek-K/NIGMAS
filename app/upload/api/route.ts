@@ -40,13 +40,14 @@ export async function POST(request: NextRequest) {
     const { data: insertData, error: insertError } = await supabase.from('images').insert({
       file_path: publicUrl.publicUrl,
       created_by: user.id,
-      tags: tags?.split(',') || [],
+      tags: tags?.toLocaleLowerCase().split(',') || [],
       title: formData.get('title') || '',
       prompt: formData.get('prompt') || '',
       width: formData.get('width'),
       height: formData.get('height'),
       likes: 0,
       model: formData.get('model') || '',
+      public: formData.get('public') || false,
     });
 
     if (insertError) throw insertError;
